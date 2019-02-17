@@ -11,6 +11,7 @@ body {
       ".  footer  .";
       Background: #ec2121;
       font-family: 'Work Sans', sans-serif;
+      line-height: 0.2rem;
 }
 
 img {
@@ -53,62 +54,74 @@ img {
      display: flex;  
 }
 
+.paradiso {
+    position: relative;
+    margin: 0rem 0rem -5.5rem 0rem;
+    z-index: 1;
+}
+
 .main {
     grid-area: main;
 }
 
-.main_container {
+.tiles {
     display: grid;
-    grid-template-columns: repeat(3, 405px);
-    grid-template-rows: 225px 400px 400px 400px;
-    grid-template-areas: 
-    "paradiso paradiso paradiso" 
-    "tile_a tile_a tile_b"
-    "tile_a tile_a tile_e"
-    "tile_c tile_d tile_e"
+    grid-template-columns: repeat(3, 400px);
+    grid-auto-rows: 400px;
+    margin: 0;
+    padding: 0;
 }
 
-.main_container img {
-    object-fit: cover;
-}
+    /* .tile { */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
 
 .tile_img {
-    position: relative;
+    object-fit: cover;
     min-height: 100%;
 }
 
 .tile-link {
-    grid-column: 1;
-    grid-row: 2;
-    height: 100%;
+    position: relative;
 }
 
-.paradiso {
-    grid-area: paradiso;
+.text_block {
+    position: relative;
+    color: white;
+    z-index: 2;
+    width: 100%;
+    padding: 2rem;
+    margin: 0;
+    }
+
+    .bevestigd_title {
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+    
+    .band_text {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+.hero {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
 }
 
-.tile_a {
-    grid-area: tile_a;
-}
-
-.tile_b {
-    grid-area: tile_b;
-}
-
-.tile_c {
-    grid-area: tile_c
-}
-
-.tile_d {
-    grid-area: tile_d
-}
-
-.tile_e {
-    grid-area: tile_e
+.long {
+    grid-column-end: span 1;
+    grid-row-end: span 2;
 }
 
 .footer {
     grid-area: footer;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+    color: white;
     margin: 1rem 1rem; 
 }
