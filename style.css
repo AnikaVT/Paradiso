@@ -16,7 +16,9 @@ body {
 
 img {
     max-width: 100%;
-}
+    min-height: 100%;
+    object-fit: cover;
+    }
 
 .header {
     grid-area: header;
@@ -68,32 +70,25 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 400px);
     grid-auto-rows: 400px;
-    margin: 0;
-    padding: 0;
+    grid-template-areas:
+    "hero hero rightcorner"
+    "hero hero long"
+    "leftcorner middle long";
 }
 
-    /* .tile { */
+    .tile {
+        position: relative;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
     }
 
-.tile_img {
-    object-fit: cover;
-    min-height: 100%;
-}
-
-.tile-link {
-    position: relative;
-}
-
 .text_block {
-    position: relative;
+    position: absolute;
     color: white;
     z-index: 2;
     width: 100%;
-    padding: 2rem;
-    margin: 0;
+    margin: 1em;
+    letter-spacing: -0.1em;
+
     }
 
     .bevestigd_title {
@@ -107,13 +102,24 @@ img {
     }
 
 .hero {
-    grid-column-end: span 2;
-    grid-row-end: span 2;
+    grid-area: hero;
+}
+
+.rightcorner {
+    grid-area: rightcorner;
+}
+
+.leftcorner {
+    grid-area: leftcorner;
+}
+
+.middle {
+    grid-area: middle; 
 }
 
 .long {
-    grid-column-end: span 1;
-    grid-row-end: span 2;
+    grid-area: long;
+    
 }
 
 .footer {
