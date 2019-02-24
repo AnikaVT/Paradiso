@@ -26,7 +26,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.4rem;
     letter-spacing: -0.1rem;
 }
@@ -79,6 +79,7 @@ img {
     .tile {
         position: relative;
         display: flex;
+        align-content:flex-end;
     }
 
 .text_block {
@@ -97,7 +98,7 @@ img {
     }
     
     .band_text {
-        font-weight: bold;
+        font-weight: 600;
         font-size: 2rem;
     }
 
@@ -121,6 +122,57 @@ img {
     grid-area: long;
     
 }
+
+.subheading {
+    display: flex;
+    flex-direction: column;
+    margin: 8rem 0rem 0.5rem 0rem;
+    color: white;
+}
+
+.titel {
+    font-size: 14.5rem;
+    font-weight: 600;
+    letter-spacing: -0.8rem;
+    text-indent: -1rem;
+    margin: 0rem 0rem 6rem 0rem;
+}
+
+.vandaag  {
+    font-size: 2rem;
+    letter-spacing: -0.1rem;
+    margin: 1rem 0rem 1.5rem 0rem;
+}
+
+.program {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    height: 350px;
+}
+
+    .tile_program {
+        position: relative;
+        display: flex;
+
+}
+
+.text_block_program {
+    position: absolute;
+    color: white;
+    width: 100%;
+    margin: 1em;
+    align-content:flex-end;
+}
+
+    .band_title_prgrm {
+        font-weight: 600;
+        font-size: 1.5rem;
+}
+
+    .band_text_prgrm {
+        font-size: 1rem;
+        line-height: 0.7rem;
+    }
 
 .footer {
     grid-area: footer;
