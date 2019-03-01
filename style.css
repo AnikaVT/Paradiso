@@ -44,7 +44,7 @@ img {
 }
 
 .navigation-items_MZ li { 
-    margin: 0.5rem;
+    margin: 0rem;
     }
 
 .nav-link {
@@ -69,7 +69,7 @@ img {
   }
 
 .fas-search {
-    padding-left: 2.7rem;
+    padding-left: 2rem;
     color:white;
 }
 
@@ -77,8 +77,9 @@ img {
         font-family: "Font Awesome 5 Free"; 
         font-weight: 900; 
         content: "\f002";
-        position: absolute;
-        left: 8rem;
+        position: relative;
+        top: 0.1em;
+        padding-right: 0.2em;
     }
 
 .header_programma {
@@ -87,7 +88,7 @@ img {
 
 .paradiso {
     position: relative;
-    margin: 0rem 0rem -5.5rem 0rem;
+    margin: 0rem 0rem -5.5rem -0.18rem;
     z-index: 1;
 }
 
@@ -115,7 +116,7 @@ img {
     color: white;
     z-index: 2;
     width: 100%;
-    margin: 1em;
+    margin: 0em 1em 0em 2em;
     letter-spacing: -0.1em;
     align-self: flex-end;
     }
@@ -188,7 +189,7 @@ img {
     position: absolute;
     color: white;
     width: 100%;
-    margin: 1em;
+    margin: 0em 0em 2em 1em;
     align-self: flex-end;
 }
 
