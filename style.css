@@ -26,7 +26,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1.4rem;
     letter-spacing: -0.1rem;
 }
@@ -39,18 +39,47 @@ img {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
-      align-items: center;
       list-style: none;
+      padding: 0rem; 
 }
 
 .navigation-items_MZ li { 
-    margin: 0.5rem 1rem; 
+    margin: 0.5rem;
     }
 
 .nav-link {
     color: white;
     text-decoration: none; 
 }
+
+.box-menu {
+    position: relative;
+    padding-left: 1.8rem;
+  }
+
+  .box-menu::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    width: 1em;
+    height: 0.7em;
+    border-top: 0.45em double white;
+    border-bottom: 0.15em solid white;
+  }
+
+.fas-search {
+    padding-left: 2.7rem;
+    color:white;
+}
+
+    .fas-search::before {
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+        content: "\f002";
+        position: absolute;
+        left: 8rem;
+    }
 
 .header_programma {
      display: flex;  
@@ -79,7 +108,6 @@ img {
     .tile {
         position: relative;
         display: flex;
-        align-content:flex-end;
     }
 
 .text_block {
@@ -89,7 +117,7 @@ img {
     width: 100%;
     margin: 1em;
     letter-spacing: -0.1em;
-
+    align-self: flex-end;
     }
 
     .bevestigd_title {
@@ -161,17 +189,18 @@ img {
     color: white;
     width: 100%;
     margin: 1em;
-    align-content:flex-end;
+    align-self: flex-end;
 }
 
     .band_title_prgrm {
         font-weight: 600;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        margin: 0rem 0rem 1.5rem 0rem;
 }
 
     .band_text_prgrm {
         font-size: 1rem;
-        line-height: 0.7rem;
+        line-height: 0.5rem;
     }
 
 .footer {
@@ -183,3 +212,39 @@ img {
     color: white;
     margin: 1rem 1rem; 
 }
+
+
+@media screen and (max-width: 45rem) {
+    body { grid-template-rows: 3rem 1fr auto;
+}
+
+.tiles {
+    grid-template-columns: 
+      minmax(16rem, 1fr) 1fr 1fr minmax(16rem, 1fr);
+    grid-template-rows: 
+      auto auto minmax(16rem, auto) auto;
+}
+
+.paradiso {
+    position: relative;
+    margin: 2rem 0rem -2.6rem 0rem;
+    z-index: 1;
+    max-width: 50%;
+}
+
+.header {
+    width: 50%; height: 4rem;
+}
+
+.titel {
+    font-size: 7.5rem;
+    letter-spacing: -0.4rem;
+}
+
+.band_text {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.band_text_prgrm {
+    font-size: .75rem;
